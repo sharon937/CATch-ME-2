@@ -1,0 +1,562 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600&family=Playfair+Display&display=swap');
+
+button{
+    border: none;
+    background-color: Transparent;;
+}
+.back-to-top {
+    display: none; /* 默認是隱藏的，這樣在第一屏才不顯示 */
+    position: fixed; /* 位置是固定的 */
+    bottom: 20px; /* 顯示在頁面底部 */
+    right: 30px; /* 顯示在頁面的右邊 */
+    z-index: 99; /* 確保不被其他功能覆蓋 */
+}
+@media (max-width:768px){
+    .back-to-top{
+        transform: scale(0.8);
+    }
+}
+@media (max-width:556px){
+    .back-to-top{
+        transform: scale(0.6);
+    }
+}
+@media (max-width:320px){
+    .back-to-top{
+        transform: scale(0.4);
+    }
+}
+.fluid{
+    width: 100%;
+    /* height: 3000px; */
+    background-color: #FFF7EE;
+}
+.container-fluid{
+    background-color: #FFF7EE;
+}
+/* menu */
+.hide{
+    display:none;
+}
+.check_box{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.menu{
+    font-family: 'Poiret One', cursive;
+    font-size: 9px;
+    color: #616568;
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    transition: 1s;
+    z-index: 100;
+}
+.menu:hover{
+    color: #616568;
+    transform: scale(1.1);
+}
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hamburger{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color:#474646ce;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.ham_a{
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2em;
+    letter-spacing: 0.3em;
+    transition: 0.5s;
+}
+.ham_a:hover{
+    text-align: center;
+    color: #e6e3e3;
+    letter-spacing: 0.8em;
+}
+.ham_item{
+    font-family: 'Noto Serif TC', serif;
+    color: #e6e3e3;
+}
+.this_ham{
+    text-decoration: underline;
+}
+.hamburger{
+   opacity: 0;
+   transform: translateY(-100%);
+   transition: 2s; 
+}
+#menu-switcher:checked ~ .hamburger {
+    transform: translateX(0%);
+    opacity: 1;
+}
+#menu-switcher {
+    display: none;
+}
+/* menu */
+@media (max-width:730px){
+    .hide{
+        display: block;
+    }
+}
+.headerset{
+    height: 123px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D0C9C1;
+    position: relative;
+    position: sticky;
+    top: 0px;
+    z-index: 98;
+}
+.a_logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    gap: 20px;
+    position: absolute;
+    top: 0;
+    right: 5%;
+}
+.navitem{
+    height: 30px;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 24px;
+    letter-spacing:8px;
+    color: #616568;
+}
+.navitem:hover{
+    color: #F2FAFF;
+}
+.navitem:focus{
+    transform: scale(1.2);
+    background-color: #1a1a1a71;
+}
+@media (max-width:824px){
+    .navitem{
+        height: 16px;
+        font-size: 10px;
+    }
+    .dot{
+       transform: scale(0.5);
+    }
+    .logo{
+        transform: scale(0.7);
+    }
+}
+@media (max-width:768px){
+    .navitem{
+        height: 16px;
+        font-size: 18px;
+    }
+    .dot{
+       transform: scale(0.3);
+    }
+    .logo{
+        transform: scale(0.5);
+    }
+}
+@media (max-width:730px){
+    .hide2{
+        display: none;
+    }
+}
+.this_page{
+    text-decoration: underline;
+}
+.dot{
+    display: flex;
+    justify-content: center;
+}
+.img_dot{
+    width: 20%;
+    height: 20%;   
+}
+/* yyyyy */
+.blank{
+    width: 100%;
+    height: 80px;
+}
+.title{
+    display: flex;
+    align-items: center;
+   height: 600px;
+}
+.title_logo{
+    width: 731px;
+    height: 173px;
+}
+.row1{
+    display: flex;
+    width: 100%;
+}
+.col1{
+    width: 25%;
+    height:30vw;  
+    margin: 0 0.1%;
+}
+@media (max-width:320px) {
+    .row1{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .col1{
+        width: 49%;
+        height:30vw;  
+        margin: 0 0.1%;
+        margin: 5% 0.1%;
+    }
+}
+.box1-1{
+    background-image: url(../img/breed/孟加拉貓.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% auto;
+    background-position:center center ; 
+    transition: 2s;
+}
+.box1-2{
+    background-image: url(../img/breed/俄羅斯藍貓.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% auto;
+    background-position:center center;
+    transition: 2s;
+}
+.box1-3{
+    background-image: url(../img/breed/暹羅貓.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% auto;
+    background-position:center center;
+    transition: 2s;
+}
+.box1-4{
+    background-image: url(../img/breed/斯芬克斯貓.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% auto;
+    background-position:center center;
+    transition: 2s;
+}
+.box1-1:hover{
+    background-size: 110% auto;
+}
+.box1-2:hover{
+    background-size: 110% auto;
+}
+.box1-3:hover{
+    background-size: 110% auto;
+}
+.box1-4:hover{
+    background-size: 110% auto;
+}
+.cat_picture{
+    width: 100%;
+    height: 30vw;
+    text-decoration: none;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 500;
+    color: #FFFFFF;
+    letter-spacing:0.2em;
+}
+.cat_picture2{
+    width: 100%;
+    height: 30vw;
+    display: inline-block;
+    text-align: end;
+    text-decoration: none;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 500;
+    color: #FFFFFF;
+    letter-spacing:0.2em;
+}
+.cat_gap{
+   padding: 10% 8%;
+}
+.cat_name{
+    font-size: 24px;
+    line-height: 200%; 
+}
+.cat_text{
+    font-size: 14px;
+    line-height: 200%;
+}
+@media (max-width:826px) {
+    .cat_name{
+        font-size: 22px;
+        line-height: 200%; 
+    }
+    .cat_text{
+        font-size: 13px;
+        line-height: 150%;
+    }
+}
+@media (max-width:768px) {
+    .cat_name{
+        font-size: 18px;
+        line-height: 180%; 
+    }
+    .cat_text{
+        font-size: 11px;
+        line-height: 140%;
+    }
+}
+@media (max-width:510px) {
+    .cat_name{
+        font-size: 10px;
+        line-height: 150%; 
+    }
+    .cat_text{
+        font-size: 9px;
+        line-height: 120%;
+    }
+}
+@media (max-width:320px) {
+    .cat_name{
+        font-size: 10px;
+        line-height: 100%; 
+    }
+    .cat_text{
+        font-size: 9px;
+        line-height: 100%;
+    }
+}
+.mask{
+    width: 100%;
+    height: 30vw;
+    transition: 1s;
+}
+.mask2{
+    width: 100%;
+    height: 30vw;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.mask:hover{
+    background-color: rgba(0, 0, 0, 0.500);
+    color: #FFFFFF;
+}
+.mask2:hover{
+    background-color: rgba(0, 0, 0, 0.500);
+    color: #FFFFFF;
+}
+.middle{
+    text-align: center;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #616568;
+    padding:7em 0;
+    margin: 0;
+}
+.row2{
+    display: flex;
+    width: 100%;
+}
+.col2{
+    width: 25%;
+    height:30vw;  
+    margin: 0 0.1%;
+}
+@media (max-width:320px) {
+    .row2{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .col2{
+        width: 49%;
+        height:30vw;  
+        margin: 0 0.1%;
+        margin: 5% 0.1%;
+    }
+}
+.box2-1{
+    background-image: url(../img/breed/布偶貓.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% auto;
+    background-position:center center ; 
+    transition: 2s;
+}
+.box2-2{
+    background-image: url(../img/breed/英短.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% auto;
+    background-position:center center;
+    transition: 2s;
+}
+.box2-3{
+    background-image: url(../img/breed/波斯貓.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% auto;
+    background-position:center center;
+    transition: 2s;
+}
+.box2-4{
+    background-image: url(../img/breed/摺耳貓.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% auto;
+    background-position:center center;
+    transition: 2s;
+}
+.box2-1:hover{
+    background-size: 110% auto;
+}
+.box2-2:hover{
+    background-size: 110% auto;
+}
+.box2-3:hover{
+    background-size: 110% auto;
+}
+.box2-4:hover{
+    background-size: 110% auto;
+}
+.bottom{
+    text-align: center;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #616568;
+    padding:7em 0;
+    margin: 0;
+}
+.cat_picture3{
+    width: 100%;
+    height: 30vw;
+    display: inline-block;
+    text-align: end;
+    text-decoration: none;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 500;
+    color: #FFFFFF;
+    letter-spacing:0.2em;
+}
+.cat_picture4{
+    width: 100%;
+    height: 30vw;
+    text-decoration: none;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 500;
+    color: #FFFFFF;
+    letter-spacing:0.2em;
+}
+.mask3{
+    width: 100%;
+    height: 30vw;
+    transition: 1s;
+}
+.mask4{
+    width: 100%;
+    height: 30vw;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.mask3:hover{
+    background-color: rgba(0, 0, 0, 0.500);
+    color: #FFFFFF;
+}
+.mask4:hover{
+    background-color: rgba(0, 0, 0, 0.500);
+    color: #FFFFFF;
+}
+/* footer */
+footer{
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #D0C9C1;
+    margin-top: -100px;
+    position: relative;
+}
+.gap{
+    width: 100%;
+    height: 100px;
+    background-color: #FFF7EE;
+    position: absolute;
+    top:0;
+}
+.footer_word{
+    font-family: 'Playfair Display', serif;
+    font-size: 11px;
+    color: #FFFFFF;
+}
+.icon{
+    display: flex;
+}
+.ig{
+    text-decoration: none;
+    height:30px;
+    width: 30px;
+    margin: 10px;
+}
+.footer_logo{
+    margin-top: 100px;
+}
+@media (max-width:768px){
+    .gap{
+        height: 80px;
+    }
+    .icon{
+        transform: scale(0.8);
+    }
+    .footer_word{
+        font-size: 10px;
+    }
+    .footer_logo{
+        transform: scale(0.8);
+    }
+}
+@media (max-width:320px){
+    .gap{
+        height: 40px;
+    }
+    .icon{
+        transform: scale(0.6);
+    }
+    .footer_word{
+        font-size: 10px;
+    }
+    .footer_logo{
+        transform: scale(0.6);
+    }
+}

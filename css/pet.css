@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600&family=Playfair+Display&display=swap');
+
+@keyframes moving{ 
+    0%{transform: translateY(0px);}
+    100%{transform: translateY(20px);}
+}
+.container-fluid{
+    background-color: #FFF7EE;
+} 
+.container-sm{
+    background-color: #FFF7EE;
+    margin-bottom: 100px;
+}
+.container{
+    background-color: #FFF7EE;
+}
+/* menu */
+.hide{
+    display:none;
+}
+.check_box{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.menu{
+    font-family: 'Poiret One', cursive;
+    font-size: 9px;
+    color: #F2FAFF;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    transition: 1s;
+    z-index: 100;
+}
+.menu:hover{
+    color: #F2FAFF;
+    transform: scale(1.1);
+}
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hamburger{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color:#474646ce;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.ham_a{
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2em;
+    letter-spacing: 0.3em;
+    transition: 0.5s;
+}
+.ham_a:hover{
+    text-align: center;
+    color: #e6e3e3;
+    letter-spacing: 0.8em;
+}
+.ham_item{
+    font-family: 'Noto Serif TC', serif;
+    color: #e6e3e3;
+}
+.this_ham{
+    text-decoration: underline;
+}
+.hamburger{
+   opacity: 0;
+   transform: translateY(-100%);
+   transition: 2s; 
+}
+#menu-switcher:checked ~ .hamburger {
+    transform: translateX(0%);
+    opacity: 1;
+}
+#menu-switcher {
+    display: none;
+}
+/* menu */
+@media (max-width:730px){
+    .hide{
+        display: block;
+    }
+}
+header{
+    display: flex;
+    flex-direction: column;
+    height: 854px;
+    background-image: url(../img/pet/img_pet.png);
+    background-repeat: no-repeat;
+    /* background-attachment:fixed; */
+    background-size: cover;
+    background-position: center center;
+    
+}
+.fixed{
+    position: relative;
+}
+button{
+    border: none;
+    background-color: Transparent;;
+}
+.back-to-top {
+    display: none; /* 默認是隱藏的，這樣在第一屏才不顯示 */
+    position: fixed; /* 位置是固定的 */
+    bottom: 20px; /* 顯示在頁面底部 */
+    right: 30px; /* 顯示在頁面的右邊 */
+    z-index: 99; /* 確保不被其他功能覆蓋 */
+}
+@media (max-width:768px){
+    .back-to-top{
+        transform: scale(0.8);
+    }
+}
+@media (max-width:556px){
+    .back-to-top{
+        transform: scale(0.6);
+    }
+}
+@media (max-width:320px){
+    .back-to-top{
+        transform: scale(0.4);
+    }
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    gap: 20px;
+    position: absolute;
+    right: 0;
+}
+.navitem{
+    height: 30px;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 24px;
+    letter-spacing:8px;
+    color: #F2FAFF;
+}
+.navitem:hover{
+    color: #1a1a1a;
+}
+.navitem:focus{
+    transform: scale(1.2);
+    background-color: #f2faff62;
+}
+@media (max-width:824px){
+    .navitem{
+        height: 16px;
+        font-size: 10px;
+    }
+    .dot{
+       transform: scale(0.5);
+    }
+    .logo{
+        transform: scale(0.7);
+    }
+}
+@media (max-width:768px){
+    .navitem{
+        height: 16px;
+        font-size: 18px;
+    }
+    .dot{
+       transform: scale(0.3);
+    }
+    .logo{
+        transform: scale(0.5);
+    }
+}
+@media (max-width:730px){
+    .hide2{
+        display: none;
+    }
+    .logo{
+        transform: scale(0.3);
+    }
+}
+@media (max-width:320px){
+    .hide2{
+        display: none;
+    }
+    .a_logo{
+        transform: scale(0.3);
+    }
+    .logo{
+        transform: scale(0.2);
+    }
+}
+.this_page{
+    text-decoration: underline;
+}
+.dot{
+    display: flex;
+    justify-content: center;
+}
+.img_dot{
+    width: 20%;
+    height: 20%;   
+}
+.little_title{
+    font-family: 'Noto Serif TC', serif;
+    font-size: 24px;
+    letter-spacing:8px;
+    color: #F2FAFF;
+    position: absolute;
+    bottom: 20%;
+    right: 15%;
+}
+@media (max-width:768px){
+    .little_title{
+        font-size: 18px;
+    }
+}
+@media (max-width:320px){
+    .little_title{
+        font-size: 10px;
+    }
+}
+.align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.photo{
+    max-height: 100%; 
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 5% 3%;
+    margin-top: 9vw;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.250);
+    position: relative;
+}
+.photo:hover{
+    animation-name: moving;
+    animation-duration: 0.3s;
+    animation-iteration-count: 4;
+    animation-direction:alternate;
+}
+.pet_photo{
+    max-height: 100%; 
+    max-width: 100%;   
+}
+.pet_photo:hover{
+    transition: filter .2s;
+    filter: brightness(0.3);
+}
+.word{
+    display: block;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+    position: absolute;
+    top: 40%;
+    right: 40%;
+    transition: 1s;
+    opacity: 0;
+}
+.word1{
+    width: 100%;
+}
+.word2{
+    width: 100%;
+    margin-left: 50%;
+}
+.a_photo:hover>.word{
+    opacity: 1;
+}
+.introduce{
+    margin-top: 5%;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.4em;
+    color: #616568;
+}
+@media (max-width:768px){
+    .word{
+        font-size: 12px;
+    }
+    .introduce{
+        font-size: 12px;
+    }
+}
+@media (max-width:320px){
+    .word{
+        font-size: 10px;
+    }
+    .introduce{
+        font-size: 10px;
+    }
+}
+
+/* footer */
+footer{
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #D0C9C1;
+    margin-top: -100px;
+    position: relative;
+    z-index: -2;
+}
+.gap{
+    width: 100%;
+    height: 100px;
+    background-color: #FFF7EE;
+    position: absolute;
+    top:0;
+    z-index: -1;
+}
+.footer_word{
+    font-family: 'Playfair Display', serif;
+    font-size: 11px;
+    color: #FFFFFF;
+}
+.icon{
+    display: flex;
+}
+.ig{
+    text-decoration: none;
+    height:30px;
+    width: 30px;
+    margin: 10px;
+}
+.footer_logo{
+    margin-top: 100px;
+}
+@media (max-width:768px){
+    .gap{
+        height: 80px;
+    }
+    .icon{
+        transform: scale(0.8);
+    }
+    .footer_word{
+        font-size: 10px;
+    }
+    .footer_logo{
+        transform: scale(0.8);
+    }
+}
+@media (max-width:320px){
+    .gap{
+        height: 40px;
+    }
+    .icon{
+        transform: scale(0.6);
+    }
+    .footer_word{
+        font-size: 10px;
+    }
+    .footer_logo{
+        transform: scale(0.6);
+    }
+}
